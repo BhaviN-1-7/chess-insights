@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import {
   LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer,
-  ScatterChart, Scatter, ZAxis
+  ScatterChart, Scatter, ZAxis, Cell
 } from "recharts";
 import { ChartCard } from "@/components/dashboard/ChartCard";
 import ratingAdv from "@/data/chess_rating_advantage.json";

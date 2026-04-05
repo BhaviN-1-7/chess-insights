@@ -14,7 +14,7 @@ const DRAW_CLR = "hsl(220, 50%, 55%)";
 const MUTED = "hsl(240, 10%, 40%)";
 
 export default function Openings() {
-  const top15 = Object.entries(stats.top_15_openings).map(([name, count]) => ({
+  const top15 = Object.entries(stats.openings_analysis.top_15_openings).map(([name, count]) => ({
     name: name.length > 30 ? name.substring(0, 30) + "..." : name,
     count
   })).sort((a, b) => b.count - a.count);

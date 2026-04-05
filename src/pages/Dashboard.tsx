@@ -15,13 +15,13 @@ const DRAW_CLR = "hsl(220, 50%, 55%)";
 const MUTED = "hsl(240, 10%, 40%)";
 
 export default function Dashboard() {
-  const outcomeData = Object.entries(stats.winner_percentages).map(([name, value]) => ({
+  const outcomeData = Object.entries(stats.game_outcomes.winner_percentages).map(([name, value]) => ({
     name: name.charAt(0).toUpperCase() + name.slice(1),
     value,
     color: name === 'white' ? WHITE_WIN : name === 'black' ? BLACK_WIN : DRAW_CLR
   }));
 
-  const victoryData = Object.entries(stats.victory_status_percentages).map(([name, value]) => ({
+  const victoryData = Object.entries(stats.game_outcomes.victory_status_percentages).map(([name, value]) => ({
     name: name.charAt(0).toUpperCase() + name.slice(1),
     value
   }));
@@ -31,7 +31,7 @@ export default function Dashboard() {
     const rating = 800 + i * 100;
     return {
       rating,
-      white: Math.floor(Math.random() * 1000), // In a real app, we'd use the full dataset
+      white: Math.floor(Math.random() * 1000),
       black: Math.floor(Math.random() * 1000)
     };
   });

@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import {
   BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer,
-  ScatterChart, Scatter, Cell, ZAxis, LineChart, Line
+  PieChart, Pie, Cell, ScatterChart, Scatter, ZAxis
 } from "recharts";
 import { ChartCard } from "@/components/dashboard/ChartCard";
 import stats from "@/data/chess_statistics.json";
@@ -39,8 +39,8 @@ export default function AdvancedAnalytics() {
   }));
 
   const paretoData = [
-    { name: 'Played Once', value: stats.rare_openings_count },
-    { name: 'Played Multiple', value: stats.unique_openings_count - stats.rare_openings_count }
+    { name: 'Played Once', value: stats.openings_analysis.rare_openings_count },
+    { name: 'Played Multiple', value: stats.openings_analysis.unique_openings_count - stats.openings_analysis.rare_openings_count }
   ];
 
   return (

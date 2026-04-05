@@ -23,7 +23,7 @@ const openingClusterInfo = [
   { id: 3, emoji: "🎯", label: "Sicilian", players: 187, rating: 1716, topOpenings: "Sicilian 29%" },
 ];
 
-function generateScatterData(clusters: typeof styleClusterInfo) {
+function generateScatterData(clusters: { id: number; players: number; rating: number }[]) {
   const points: { x: number; y: number; cluster: number; player: string; rating: number }[] = [];
   clusters.forEach(c => {
     for (let i = 0; i < c.players; i++) {

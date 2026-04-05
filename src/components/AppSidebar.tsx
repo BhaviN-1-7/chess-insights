@@ -1,6 +1,14 @@
-import { BarChart3, Sparkles, Users, BookOpen } from "lucide-react";
+import { 
+  LayoutDashboard, 
+  BookOpen, 
+  Clock, 
+  MoveHorizontal, 
+  TrendingUp, 
+  Zap,
+  Sparkles,
+  Users
+} from "lucide-react";
 import { NavLink } from "@/components/NavLink";
-import { useLocation } from "react-router-dom";
 import {
   Sidebar,
   SidebarContent,
@@ -13,16 +21,19 @@ import {
 } from "@/components/ui/sidebar";
 
 const items = [
-  { title: "Dashboard", url: "/", icon: BarChart3 },
+  { title: "Overview", url: "/", icon: LayoutDashboard },
   { title: "Predict", url: "/predict", icon: Sparkles },
-  { title: "Styles", url: "/styles", icon: Users },
+  { title: "Player Styles", url: "/styles", icon: Users },
   { title: "Openings", url: "/openings", icon: BookOpen },
+  { title: "Time Control", url: "/time-control", icon: Clock },
+  { title: "Game Length", url: "/game-length", icon: MoveHorizontal },
+  { title: "Rating Impact", url: "/rating-impact", icon: TrendingUp },
+  { title: "Advanced", url: "/advanced", icon: Zap },
 ];
 
 export function AppSidebar() {
   const { state } = useSidebar();
   const collapsed = state === "collapsed";
-  const location = useLocation();
 
   return (
     <Sidebar collapsible="icon" className="border-r border-border">

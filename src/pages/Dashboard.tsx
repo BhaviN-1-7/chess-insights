@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import {
   BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer,
   PieChart, Pie, Cell, LineChart, Line, Legend,
-  CartesianGrid, Area, AreaChart, ScatterChart, Scatter, ZAxis
+  CartesianGrid, Area, AreaChart
 } from "recharts";
 import { StatCard } from "@/components/dashboard/StatCard";
 import { ChartCard } from "@/components/dashboard/ChartCard";
@@ -13,8 +13,7 @@ import {
   chessStatistics, 
   openingWinRates, 
   ratingAdvantage, 
-  playerCategories, 
-  correlationMatrix 
+  playerCategories 
 } from "@/data/chessData";
 
 const GOLD = "hsl(45, 80%, 65%)";
@@ -253,20 +252,7 @@ export default function Dashboard() {
               </ResponsiveContainer>
             </ChartCard>
 
-            <ChartCard title="13. Feature Correlation Matrix">
-              <ResponsiveContainer width="100%" height={250}>
-                <ScatterChart margin={{ top: 20, right: 20, bottom: 20, left: 20 }}>
-                  <CartesianGrid strokeDasharray="3 3" stroke="hsl(240,10%,16%)" />
-                  <XAxis type="category" dataKey="x" name="Feature A" tick={{ fill: MUTED, fontSize: 10 }} />
-                  <YAxis type="category" dataKey="y" name="Feature B" tick={{ fill: MUTED, fontSize: 10 }} />
-                  <ZAxis type="number" dataKey="v" range={[50, 400]} name="Correlation" />
-                  <Tooltip cursor={{ strokeDasharray: '3 3' }} />
-                  <Scatter name="Correlation" data={correlationMatrix} fill={GOLD} />
-                </ScatterChart>
-              </ResponsiveContainer>
-            </ChartCard>
-
-            <ChartCard title="14. Opening Popularity Pareto">
+            <ChartCard title="13. Opening Popularity Pareto">
               <ResponsiveContainer width="100%" height={250}>
                 <PieChart>
                   <Pie data={chessStatistics.opening_popularity_pareto} cx="50%" cy="50%" innerRadius={40} outerRadius={70} dataKey="value" label>
@@ -280,7 +266,7 @@ export default function Dashboard() {
               </ResponsiveContainer>
             </ChartCard>
 
-            <ChartCard title="15. Skill Level Comparison (Black)">
+            <ChartCard title="14. Skill Level Comparison (Black)">
               <ResponsiveContainer width="100%" height={250}>
                 <BarChart data={playerCategories.black}>
                   <CartesianGrid strokeDasharray="3 3" stroke="hsl(240,10%,16%)" />

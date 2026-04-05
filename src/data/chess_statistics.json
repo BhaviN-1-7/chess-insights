@@ -1,0 +1,333 @@
+{
+  "dataset_info": {
+    "total_rows": 20058,
+    "total_columns": 23,
+    "numeric_columns": [
+      "created_at",
+      "last_move_at",
+      "turns",
+      "white_rating",
+      "black_rating",
+      "opening_ply"
+    ],
+    "categorical_columns": [
+      "id",
+      "victory_status",
+      "winner",
+      "increment_code",
+      "white_id",
+      "black_id",
+      "moves",
+      "opening_eco",
+      "opening_name"
+    ],
+    "memory_usage_mb": 21.96090602874756
+  },
+  "column_info": [
+    {
+      "Column Name": "id",
+      "Data Type": "str",
+      "Unique Values": 19113,
+      "Missing Values": 0,
+      "Missing %": 0.0
+    },
+    {
+      "Column Name": "rated",
+      "Data Type": "bool",
+      "Unique Values": 2,
+      "Missing Values": 0,
+      "Missing %": 0.0
+    },
+    {
+      "Column Name": "created_at",
+      "Data Type": "float64",
+      "Unique Values": 13151,
+      "Missing Values": 0,
+      "Missing %": 0.0
+    },
+    {
+      "Column Name": "last_move_at",
+      "Data Type": "float64",
+      "Unique Values": 13186,
+      "Missing Values": 0,
+      "Missing %": 0.0
+    },
+    {
+      "Column Name": "turns",
+      "Data Type": "int64",
+      "Unique Values": 211,
+      "Missing Values": 0,
+      "Missing %": 0.0
+    },
+    {
+      "Column Name": "victory_status",
+      "Data Type": "str",
+      "Unique Values": 4,
+      "Missing Values": 0,
+      "Missing %": 0.0
+    },
+    {
+      "Column Name": "winner",
+      "Data Type": "str",
+      "Unique Values": 3,
+      "Missing Values": 0,
+      "Missing %": 0.0
+    },
+    {
+      "Column Name": "increment_code",
+      "Data Type": "str",
+      "Unique Values": 400,
+      "Missing Values": 0,
+      "Missing %": 0.0
+    },
+    {
+      "Column Name": "white_id",
+      "Data Type": "str",
+      "Unique Values": 9438,
+      "Missing Values": 0,
+      "Missing %": 0.0
+    },
+    {
+      "Column Name": "white_rating",
+      "Data Type": "int64",
+      "Unique Values": 1516,
+      "Missing Values": 0,
+      "Missing %": 0.0
+    },
+    {
+      "Column Name": "black_id",
+      "Data Type": "str",
+      "Unique Values": 9331,
+      "Missing Values": 0,
+      "Missing %": 0.0
+    },
+    {
+      "Column Name": "black_rating",
+      "Data Type": "int64",
+      "Unique Values": 1521,
+      "Missing Values": 0,
+      "Missing %": 0.0
+    },
+    {
+      "Column Name": "moves",
+      "Data Type": "str",
+      "Unique Values": 18920,
+      "Missing Values": 0,
+      "Missing %": 0.0
+    },
+    {
+      "Column Name": "opening_eco",
+      "Data Type": "str",
+      "Unique Values": 365,
+      "Missing Values": 0,
+      "Missing %": 0.0
+    },
+    {
+      "Column Name": "opening_name",
+      "Data Type": "str",
+      "Unique Values": 1477,
+      "Missing Values": 0,
+      "Missing %": 0.0
+    },
+    {
+      "Column Name": "opening_ply",
+      "Data Type": "int64",
+      "Unique Values": 23,
+      "Missing Values": 0,
+      "Missing %": 0.0
+    }
+  ],
+  "rating_statistics": {
+    "white_rating": {
+      "min": 784.0,
+      "max": 2700.0,
+      "mean": 1596.6318675840064,
+      "median": 1567.0,
+      "std": 291.2533757370189
+    },
+    "black_rating": {
+      "min": 789.0,
+      "max": 2723.0,
+      "mean": 1588.8319872370128,
+      "median": 1562.0,
+      "std": 291.03612596033423
+    },
+    "rating_diff": {
+      "mean": 7.799880346993718,
+      "median": 3.0,
+      "min": -1605.0,
+      "max": 1499.0
+    }
+  },
+  "game_outcomes": {
+    "winner_counts": {
+      "white": 10001,
+      "black": 9107,
+      "draw": 950
+    },
+    "winner_percentages": {
+      "white": 49.86040482600458,
+      "black": 45.403330342008175,
+      "draw": 4.736264831987238
+    },
+    "victory_status_counts": {
+      "resign": 11147,
+      "mate": 6325,
+      "outoftime": 1680,
+      "draw": 906
+    },
+    "victory_status_percentages": {
+      "resign": 55.57383587595972,
+      "mate": 31.533552697178184,
+      "outoftime": 8.375710439724799,
+      "draw": 4.516900987137302
+    }
+  },
+  "openings_analysis": {
+    "top_15_openings": {
+      "Van't Kruijs Opening": 368,
+      "Sicilian Defense": 358,
+      "Sicilian Defense: Bowdler Attack": 296,
+      "French Defense: Knight Variation": 271,
+      "Scotch Game": 271,
+      "Scandinavian Defense: Mieses-Kotroc Variation": 259,
+      "Queen's Pawn Game: Mason Attack": 232,
+      "Queen's Pawn Game: Chigorin Variation": 229,
+      "Scandinavian Defense": 223,
+      "Horwitz Defense": 209,
+      "Caro-Kann Defense": 199,
+      "Philidor Defense #3": 198,
+      "Philidor Defense #2": 193,
+      "Indian Game": 181,
+      "Italian Game: Anti-Fried Liver Defense": 180
+    },
+    "top_15_eco_codes": {
+      "A00": 1007,
+      "C00": 844,
+      "D00": 739,
+      "B01": 716,
+      "C41": 691,
+      "C20": 675,
+      "A40": 618,
+      "B00": 611,
+      "B20": 567,
+      "C50": 538,
+      "C40": 446,
+      "D02": 434,
+      "C44": 375,
+      "C42": 327,
+      "C55": 312
+    },
+    "opening_ply_stats": {
+      "mean": 4.8169807558081565,
+      "median": 4.0,
+      "min": 1,
+      "max": 28
+    },
+    "unique_openings_count": 1477,
+    "rare_openings_count": 382
+  },
+  "time_control_analysis": {
+    "distribution": {
+      "Blitz (3-10 min)": 13338,
+      "Rapid (10-30 min)": 5999,
+      "Classical (>30 min)": 533,
+      "Bullet (\u22643 min)": 188
+    },
+    "percentages": {
+      "Blitz (3-10 min)": 66.4971582411008,
+      "Rapid (10-30 min)": 29.9082660285173,
+      "Classical (>30 min)": 2.65729384784126,
+      "Bullet (\u22643 min)": 0.9372818825406322
+    },
+    "win_rates_by_category": {
+      "Rapid (10-30 min)": {
+        "white": 50.2750458409735,
+        "black": 44.52408734789132,
+        "draw": 5.20086681113519
+      },
+      "Blitz (3-10 min)": {
+        "white": 49.74508921877343,
+        "black": 45.89143799670116,
+        "draw": 4.363472784525416
+      },
+      "Classical (>30 min)": {
+        "white": 50.093808630394,
+        "black": 40.150093808630395,
+        "draw": 9.75609756097561
+      },
+      "Bullet (\u22643 min)": {
+        "white": 44.148936170212764,
+        "black": 53.72340425531915,
+        "draw": 2.127659574468085
+      }
+    }
+  },
+  "game_length_analysis": {
+    "basic_stats": {
+      "mean": 60.46599860404826,
+      "median": 55.0,
+      "min": 1,
+      "max": 349,
+      "std": 33.570584753537126
+    },
+    "by_outcome": {
+      "mean": {
+        "black": 60.72438783353464,
+        "draw": 86.15789473684211,
+        "white": 57.79022097790221
+      },
+      "median": {
+        "black": 56.0,
+        "draw": 89.0,
+        "white": 53.0
+      },
+      "min": {
+        "black": 1,
+        "draw": 2,
+        "white": 1
+      },
+      "max": {
+        "black": 222,
+        "draw": 259,
+        "white": 349
+      }
+    },
+    "by_victory_status": {
+      "mean": {
+        "draw": 83.78145695364239,
+        "mate": 65.41501976284584,
+        "outoftime": 72.74285714285715,
+        "resign": 53.91253251996053
+      },
+      "median": {
+        "draw": 86.0,
+        "mate": 59.0,
+        "outoftime": 71.0,
+        "resign": 50.0
+      }
+    }
+  },
+  "rated_vs_unrated": {
+    "distribution": {
+      "true": 16155,
+      "false": 3903
+    },
+    "percentages": {
+      "true": 80.54142985342507,
+      "false": 19.45857014657493
+    },
+    "win_rates": {
+      "rated": {
+        "white": 49.84215413184773,
+        "black": 45.707211389662646,
+        "draw": 4.450634478489632
+      },
+      "unrated": {
+        "white": 49.935946707660776,
+        "black": 44.14552908019472,
+        "draw": 5.918524212144504
+      }
+    }
+  }
+}

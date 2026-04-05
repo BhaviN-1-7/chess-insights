@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import {
   BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer,
-  Legend
+  ComposedChart, Scatter, Cell
 } from "recharts";
 import { ChartCard } from "@/components/dashboard/ChartCard";
 import stats from "@/data/chess_statistics.json";
@@ -26,7 +26,7 @@ export default function GameLength() {
     };
   });
 
-  // Box plot data (simulated with bar chart for Recharts)
+  // Box plot data (simulated with scatter for Recharts)
   const boxData = Object.entries(stats.game_length_analysis.by_outcome).map(([name, data]: [string, any]) => ({
     name: name.charAt(0).toUpperCase() + name.slice(1),
     mean: data.mean,

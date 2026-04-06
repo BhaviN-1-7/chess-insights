@@ -26,13 +26,13 @@ export function AppSidebar() {
 
   return (
     <Sidebar collapsible="icon" className="border-r border-border">
-      <div className="p-4 flex items-center gap-3">
-        <span className="text-2xl">♚</span>
+      <div className="p-4 flex items-center justify-center">
         {!collapsed && (
           <h1 className="font-display text-sm font-bold text-gradient-gold tracking-wider">
-            CHESS INSIGHT
+            CHESS INSIGHTS
           </h1>
         )}
+        {collapsed && <span className="text-xl font-bold text-primary">C</span>}
       </div>
       <SidebarContent>
         <SidebarGroup>

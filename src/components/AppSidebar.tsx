@@ -1,6 +1,5 @@
-import { BarChart3, Sparkles, Users, BookOpen } from "lucide-react";
+import { BarChart3, Sparkles, Users, BookOpen, Crown } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
-import { useLocation } from "react-router-dom";
 import {
   Sidebar,
   SidebarContent,
@@ -22,17 +21,16 @@ const items = [
 export function AppSidebar() {
   const { state } = useSidebar();
   const collapsed = state === "collapsed";
-  const location = useLocation();
 
   return (
     <Sidebar collapsible="icon" className="border-r border-border">
-      <div className="p-4 flex items-center justify-center">
+      <div className="p-4 flex items-center gap-2 justify-center">
+        <Crown className="h-5 w-5 text-primary shrink-0" />
         {!collapsed && (
           <h1 className="font-display text-sm font-bold text-gradient-gold tracking-wider">
             CHESS INSIGHTS
           </h1>
         )}
-        {collapsed && <span className="text-xl font-bold text-primary">C</span>}
       </div>
       <SidebarContent>
         <SidebarGroup>
